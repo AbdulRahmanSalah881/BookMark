@@ -10,9 +10,17 @@ function AddLink() {
 
 
     if (validationname() && validationweb()) {
-        var Site = { // Entar a data 
-            name: SiteNameInput.value,//valu name 
-            url_link: SiteURLInput.value//valu url 
+       if (!SiteURLInput.value.startsWith('http://') && !SiteURLInput.value.startsWith('https://')) {
+            var Site = { // Entar a data 
+                name: SiteNameInput.value,//valu name 
+                url_link: `http://${SiteURLInput.value}`//valu url 
+            }
+        }
+        else{
+            var Site = { // Entar a data 
+                name: SiteNameInput.value,//valu name 
+                url_link: SiteURLInput.value//valu url 
+            }
         }
         sitlist.push(Site)
         localStorage.setItem("SiteContainer", JSON.stringify(sitlist))
