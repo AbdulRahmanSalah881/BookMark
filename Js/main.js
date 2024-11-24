@@ -60,7 +60,7 @@ function desplaydata() {
 
         cartona += `
             <tr>
-                    <th scope="row"><i class="fa-solid fa-arrow-right"></i>   ${i}  <i class="fa-solid fa-arrow-left"></i>  </th>
+                    <th scope="row">   ${i}    </th>
                     <td>${sitlist[i].name}</td>
                     <td>  <a target="_blank" href="${sitlist[i].url_link}"> <button class="btn btn-primary btn1" type="button"> <i class="fa-solid fa-eye"></i> Visit</button></a>
                     </td>
