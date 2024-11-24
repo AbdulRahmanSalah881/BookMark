@@ -93,15 +93,16 @@ function searchData() {
     var cartona = "";
     for (var i = 0; i < sitlist.length; i++) {
         if (sitlist[i].name.toLowerCase().includes(term.toLowerCase())) {
-            cartona += `
-        <tr>
-                <th scope="row">${i}</th>
-                <td>${sitlist[i].name}</td>
-                <td>  <a target="_blank" href="${sitlist[i].url_link}"> <button class="btn btn-primary" type="button"> <i class="fa-solid fa-eye"></i> Visit</button></a>
-                </td>
-                <td> <button onclick="deletlink(${i})" class="btn btn-danger" type="button"> <i class="fa-solid fa-trash"></i>Delete</button>
-                </td>
-        </tr>`
+  cartona += `
+            <tr>
+                    <th scope="row">  ${i}  </i>  </th>
+                    <td>${sitlist[i].name}</td>
+                    <td>  <a target="_blank" href="${sitlist[i].url_link}"> <button class="btn btn-primary btn1" type="button"> <i class="fa-solid fa-eye"></i> Visit</button></a>
+                    </td>
+                    <td> <button onclick="deletlink(${i})" class="btn btn-danger btn2" type="button"> <i class="fa-solid fa-trash"></i>Delete</button>
+                    </td>
+    
+                    </tr>`
         }
 
     }
