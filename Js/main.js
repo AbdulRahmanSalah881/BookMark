@@ -10,27 +10,28 @@ function AddLink() {
 
 
     if (validationname() && validationweb()) {
-       if (!SiteURLInput.value.startsWith('http://') && !SiteURLInput.value.startsWith('https://')) {
+        if (!SiteURLInput.value.startsWith('http://') && !SiteURLInput.value.startsWith('https://')) {
             var Site = { // Entar a data 
                 name: SiteNameInput.value,//valu name 
                 url_link: `http://${SiteURLInput.value}`//valu url 
             }
         }
-        else{
+        else {
             var Site = { // Entar a data 
                 name: SiteNameInput.value,//valu name 
                 url_link: SiteURLInput.value//valu url 
             }
         }
+
         sitlist.push(Site)
         localStorage.setItem("SiteContainer", JSON.stringify(sitlist))
         desplaydata();//after the data input this function to make list of table of data
-        // console.log(sitlist)
+        console.log(sitlist)
         Swal.fire({
             title: "Good job!",
             text: "success",
             icon: "Tack Care  "
-          });
+        });
         clearSite();
 
 
@@ -60,7 +61,7 @@ function desplaydata() {
 
         cartona += `
             <tr>
-                    <th scope="row">   ${i}    </th>
+                    <th scope="row">  ${i}  </i>  </th>
                     <td>${sitlist[i].name}</td>
                     <td>  <a target="_blank" href="${sitlist[i].url_link}"> <button class="btn btn-primary btn1" type="button"> <i class="fa-solid fa-eye"></i> Visit</button></a>
                     </td>
@@ -68,7 +69,7 @@ function desplaydata() {
                     </td>
     
                     </tr>`
-      
+
 
     }
 
@@ -106,7 +107,7 @@ function searchData() {
     }
     document.getElementById("Tabledata").innerHTML = cartona;
 
-
+    console.log("hello")
 }
 
 function validationname() {
